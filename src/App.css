@@ -1,0 +1,110 @@
+/* ── Reset & base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f0f2ee;
+  min-height: 100vh;
+}
+
+/* ── Layout ── */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem 4rem;
+  gap: 2rem;
+  z-index: 1;
+}
+
+/* ── Plant strips ── */
+.plant-strip {
+  width: 100%;
+  max-height: 130px;
+  opacity: 0.85;
+}
+
+.plant-strip svg {
+  width: 100%;
+  height: 130px;
+}
+
+.plant-strip--bottom {
+  margin-top: auto;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 600;
+  color: #2d3e2d;
+  letter-spacing: -0.01em;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #5a7a5a;
+  font-weight: 300;
+}
+
+.card-count {
+  font-size: 0.82rem;
+  color: #8aba84;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ── Card area ── */
+.card-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Next button ── */
+.next-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.65rem 1.8rem;
+  border-radius: 100px;
+  border: 2px solid #2d3e2d;
+  background: #2d3e2d;
+  color: #f0f2ee;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+
+.next-btn:hover {
+  background: #f0f2ee;
+  color: #2d3e2d;
+}
+
+.next-btn:active {
+  transform: scale(0.97);
+}
+
+.next-btn:focus-visible {
+  outline: 2px solid #8aba84;
+  outline-offset: 3px;
+}
